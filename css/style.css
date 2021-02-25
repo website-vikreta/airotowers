@@ -1,0 +1,349 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=RocknRoll+One&display=swap');
+
+/* variables */
+:root{
+
+    /* fonts */
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'RocknRoll One', sans-serif;
+
+    /* colors */
+    --red: #E11C23;
+    --dark1: #1b1b1b;
+    --dark2: #666666;
+    --light: #F7F7F7;
+    --white: #fff;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+    font-family: var(--primary-font);
+}
+
+/* some resets */
+.container{
+    max-width: 1200px;
+}
+a{
+    text-decoration: none !important;
+    outline: none !important;
+}
+.btn,button,.form-control{
+    box-shadow: none !important;
+    outline: none !important;
+}
+ul{list-style: none; margin: 0 !important; padding: 0 !important;}
+section{padding: 80px 0;}
+
+/* classes i'll required */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* component styling */
+.para{
+    font-size: 0.9rem;
+    color: var(--dark2);
+}
+.btn{
+    border: 1px solid transparent;
+    background: white;
+    color: var(--dark1);
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+    min-width: 120px;
+}
+.btn.solid{
+    border-color: var(--red);
+    background: var(--red);
+    color: white;
+}
+.btn.solid:hover{color: white;}
+.btn.transparent{
+    border-color: var(--red);
+}
+.btn:active{
+    transform: scale(0.95);
+}
+.heading{
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+}
+.heading-line{
+    margin: 1rem 0;
+    height: 5px;
+    width: 75px;
+    background: var(--red);
+}
+.sub-heading{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--dark2);
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ! =============================================== */
+/* ! NAVBAR */
+/* ! =============================================== */
+.navbar{border-bottom: 1px solid #ddd; padding: 0;}
+.navbar .navbar-brand{
+    font-family: var(--secondary-font) !important;
+    color: var(--red);
+    font-size: 1.5rem;
+}
+.navbar .navbar-brand:hover{color: var(--red);}
+.navbar .nav-item{
+    padding: 1rem;
+}
+.navbar .nav-item *{
+    color: var(--dark1) !important;
+}
+.navbar .nav-item.active{
+    border-bottom: 5px solid var(--red) !important;
+    margin-bottom: -5px;
+}
+
+/* ! =============================================== */
+/* ! HERO */
+/* ! =============================================== */
+.hero{
+    min-height: 80vh;
+    position: relative;
+}
+.hero .hero-heading{
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    color: var(--dark1);
+    line-height: 100%;
+}
+.hero .hero-subheading{
+    font-size: 1.5rem;
+    color: var(--dark1);
+    margin-bottom: 1rem;
+}
+.hero img{
+    max-height: 400px;
+}
+.hero .shape{
+    position: absolute;
+    left: 1%;
+    bottom: 10%;
+}
+.hero:after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    background: var(--red);
+}
+
+/* ! =============================================== */
+/* ! NEED */
+/* ! =============================================== */
+.need{
+    position: relative;
+}
+.need .need-img{
+    max-height: 350px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    /* border: 10px solid var(--dark1); */
+    border-left: 2px solid var(--red);
+    padding: 2rem;
+}
+.need ul{
+    margin-left: 1rem !important;
+    list-style: disc;
+    font-size: 0.9rem;
+    color: var(--dark2);
+}
+.need ul li{
+    margin: 0.5rem 0;
+}
+.need #accordion{
+    margin-top: 1.5rem;
+}
+.need button{
+    background: none !important;
+    color: var(--dark1);
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+.btn-link:hover {
+    text-decoration: none !important;
+}
+
+/* ! =============================================== */
+/* ! About Us */
+/* ! =============================================== */
+.about-us{
+    position: relative;
+}
+.about-us ul{
+    margin-left: 1rem !important;
+    list-style: disc;
+    font-size: 0.9rem;
+    color: var(--dark2);
+}
+.about-us ul li{
+    margin: 0.5rem 0;
+}
+.about-us img{
+    max-height: 400px;
+}
+.about-us .shape{
+    position: absolute;
+    bottom: 10%;
+    right: 2%;
+    width: 100px;
+}
+
+/* ! =============================================== */
+/* ! Products */
+/* ! =============================================== */
+.products .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 1rem;
+
+    border: none;
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.products .card:hover{
+    border-bottom: 2px solid var(--red);
+}
+.products .card .image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.products .card .image img{
+    height: 180px;
+}
+.products .card .sub-heading{color: var(--dark1);}
+.products .card p{
+    margin-bottom: 0.5rem;
+}
+.products .card ul{
+    flex-grow: 1 !important;
+    list-style: square;
+    margin-left: 1rem !important;
+    margin-top: 0 !important;
+}
+.products .card ul li{
+    font-size: 0.8rem;
+    color: var(--dark2);
+    margin: 0.25rem 0;
+}
+.products .card ul li b{color: var(--dark1);}
+.slick-track
+{
+    display: flex !important;
+}
+.slick-slide
+{
+    height: inherit !important;
+}
+.products .slider-wrapper{
+    position: relative;
+}
+.products .slider-btns .slider-btn{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--red);
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.products .slider-btns .left{
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+.products .slider-btns .right{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+}
+
+/* ! =============================================== */
+/* ! CONTACT US */
+/* ! =============================================== */
+.contact-us form{
+    background: white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin: 50px 0;
+}
+.contact-us form label{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--dark1);
+    margin: 0;
+}
+.contact-us form input[type=text],
+.contact-us form textarea{
+    resize: none;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    padding: 1.2rem initial !important;
+}
+.contact-us .social .sub-heading{
+    font-weight: bold;
+    color: var(--dark1);
+}
+.contact-us .social img{
+    max-height: 80px;
+}
+
+/* ! =============================================== */
+/* !  */
+/* ! =============================================== */
+/* ! =============================================== */
+/* !  */
+/* ! =============================================== */
+/* ! =============================================== */
+/* !  */
+/* ! =============================================== */
+/* ! =============================================== */
+/* !  */
+/* ! =============================================== */
